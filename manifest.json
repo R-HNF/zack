@@ -8,32 +8,31 @@
         "48": "images/icon48.png",
         "128": "images/icon128.png"
     },
-    "action": {
-        "default_title": "Send and log current page to Slack",
-        "default_popup": "popup.html",
-        "default_icon": {
-            "16": "images/icon16.png",
-            "48": "images/icon48.png",
-            "128": "images/icon128.png"
-        }
-    },
+    "action": {},
     "background": {
-        "service_worker": "background.js"
+        "service_worker": "background/background.js"
     },
+
     "commands": {
-        "_execute_action": {
+        "sendToSlack": {
             "suggested_key": {
                 "default": "Ctrl+Shift+F",
                 "mac": "Command+Shift+F"
             },
-            "description": "アクションを実行"
+            "description": "Execute action"
+        },
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+F",
+                "mac": "Command+Shift+F"
+            }
         }
     },
     "host_permissions": [
         "<all_urls>"
     ],
     "options_ui": {
-        "page": "options.html",
+        "page": "options/options.html",
         "open_in_tab": true
     },
     "permissions": [
