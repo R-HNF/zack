@@ -1,0 +1,43 @@
+{
+    "manifest_version": 3,
+    "name": "Slack Web Logger",
+    "version": "1.0",
+    "description": "One-click Chrome extension to send and log web pages to Slack.",
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "action": {},
+    "background": {
+        "service_worker": "background/background.js"
+    },
+
+    "commands": {
+        "sendToSlack": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+F",
+                "mac": "Command+Shift+F"
+            },
+            "description": "Execute action"
+        },
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+F",
+                "mac": "Command+Shift+F"
+            }
+        }
+    },
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "options_ui": {
+        "page": "options/options.html",
+        "open_in_tab": true
+    },
+    "permissions": [
+        "activeTab",
+        "storage",
+        "notifications"
+    ]
+}
