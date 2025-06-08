@@ -20,13 +20,13 @@
     </div>
 
     <div class="mb-3">
-      <label for="posting-channel"><b>Posting Channel:</b></label>
-      <input type="text" id="posting-channel" placeholder="#sample" class="form-control">
+      <label for="short-desc"><b>Short Description about the Webhook URL:</b></label>
+      <input type="text" id="short-desc" placeholder="This Webhook is for #example" class="form-control">
     </div>
 
     <div class="mb-3">
-      <label for="posting-format"><b>Posting Format:</b></label>
-      <select id="posting-format" class="form-control">
+      <label for="logging-format-type-id"><b>Logging Format:</b></label>
+      <select id="logging-format-type-id" class="form-control">
         <option value="markdown">Markdown: Title</option>
         <option value="simple">Simple: Title\nURL</option>
         <option value="url-only">URL Only</option>
@@ -34,11 +34,12 @@
     </div>
 
     <div class="mb-3">
-      <button class="btn btn-primary" id="save">Save</button>
+      <button class="btn btn-primary" id="save-btn">Save</button>
     </div>
   </div>
 
   <script src="./bootstrap.bundle.min.js"></script>
+  <script src="options.js"></script>
 </body>
 
 </html>
