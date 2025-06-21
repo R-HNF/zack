@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Slack Web Logger",
+    "name": "Zack",
     "version": "1.0",
     "description": "One-click Chrome extension to send and log web pages to Slack.",
     "icons": {
