@@ -12,20 +12,12 @@
     "background": {
         "service_worker": "background/background.js"
     },
-
     "commands": {
-        "sendToSlack": {
-            "suggested_key": {
-                "default": "Ctrl+Shift+F",
-                "mac": "Command+Shift+F"
-            },
-            "description": "Execute action"
-        },
         "_execute_action": {
             "suggested_key": {
-                "default": "Ctrl+Shift+F",
-                "mac": "Command+Shift+F"
-            }
+                "default": "Alt+Shift+Z"
+            },
+            "description": "Zack - Send current page to Slack"
         }
     },
     "host_permissions": [

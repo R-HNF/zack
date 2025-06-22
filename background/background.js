@@ -73,7 +73,7 @@ chrome.action.onClicked.addListener(() => {
 });
 
 chrome.commands.onCommand.addListener((command) => {
-    if (command === 'sendToSlack') {
+    if (command === '_execute_action') {
         logToSlack();
     }
 });
