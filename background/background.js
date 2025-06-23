@@ -29,7 +29,7 @@ function makeNotification() {
 }
 
 function logToSlack() {
-    chrome.storage.sync.get('slackWebhookUrl', async (data) => {
+    chrome.storage.local.get('slackWebhookUrl', async (data) => {
         const slackWebhookUrl = data.slackWebhookUrl;
         const loggingFormatType = data.loggingFormatType || 'markdown';
 

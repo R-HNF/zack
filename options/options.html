@@ -5,41 +5,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zack Settings</title>
+  <style>
+    body {
+      opacity: 0;
+      transition: opacity 0.1s ease-in-out;
+    }
+
+    body.loaded {
+      opacity: 1;
+    }
+  </style>
   <link href="./bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-  <div class="container">
-    <h1><b>Zack Settings</b></h1>
-    <p>The settings will be saved in the extension's storage.<br>
-      Reference: <a href="https://developer.chrome.com/docs/extensions/reference/storage/">Chrome Storage API</a>
+  <div class="container pt-5">
+    <h1>
+      <b>Zack Settings</b>
+    </h1>
+    <p>
+      The settings will be saved in the extension's storage.<br>
+      Reference:
+      <a href="https://developer.chrome.com/docs/extensions/reference/storage/">
+        Chrome Storage API
+      </a>
     </p>
+
     <div class="mb-3">
-      <label for="webhook-url"><b>Webhook URL:</b></label>
+      <label for="webhook-url">
+        <b>Webhook URL:</b>
+      </label>
       <input type="text" id="webhook-url" placeholder="https://hooks.slack.com/services/..." class="form-control">
     </div>
 
     <div class="mb-3">
-      <label for="short-desc"><b>Short Description about the Webhook URL:</b></label>
+      <label for="short-desc">
+        <b>Short Description about the Webhook URL:</b>
+      </label>
       <input type="text" id="short-desc" placeholder="This Webhook is for #example" class="form-control">
     </div>
 
     <div class="mb-3">
-      <label for="logging-format-type-id"><b>Logging Format:</b></label>
-      <select id="logging-format-type-id" class="form-control">
-        <option value="markdown">Markdown: Title</option>
-        <option value="simple">Simple: Title\nURL</option>
-        <option value="url-only">URL Only</option>
+      <label for="logging-format-type">
+        <b>Logging Format:</b>
+      </label>
+      <select id="logging-format-type" class="form-control">
+        <option value="markdown">
+          Markdown: Title
+        </option>
+        <option value="simple">
+          Simple: Title\nURL
+        </option>
+        <option value="url-only">
+          URL Only
+        </option>
       </select>
     </div>
 
     <div class="mb-3">
-      <button class="btn btn-primary" id="save-btn">Save</button>
+      <button class="btn btn-primary" id="save-btn">
+        Save
+      </button>
+      <div id="notification" style="display: inline-block; vertical-align: bottom; margin-left: 10px;"></div>
     </div>
   </div>
 
   <script src="./bootstrap.bundle.min.js"></script>
-  <script src="options.js"></script>
+  <script src="./options.js"></script>
 </body>
 
 </html>
