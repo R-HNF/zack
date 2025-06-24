@@ -52,21 +52,21 @@ function zack() {
                         });
 
                         if (response.ok) {
-                            makeNotification('Saved the current page!');
+                            makeNotification('Saved the current page');
                         } else {
-                            makeNotification('Error: Webhook request failed');
+                            makeNotification('Webhook request failed');
                         }
+                    } else {
+                        makeNotification('No active tab found');
                     }
                 });
             } catch (error) {
                 makeNotification('Error: Zack failed');
             }
         } else {
-            makeNotification('Error: No Webhook URL set');
+            makeNotification('No webhook url set');
             return;
         }
-
-
     });
 }
 

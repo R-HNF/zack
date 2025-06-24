@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             notificationElement.textContent = 'Error';
             notificationElement.style.color = 'red';
-            console.error('Error: Cannot save settings');
+            console.error('Error: Saveing the settings failed');
         }
     });
 });
