@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             new URL(webhookUrlValue);
         } catch (error) {
-            notificationElement.textContent = 'Invalid URL';
+            notificationElement.textContent = 'Invalid webhook url';
             notificationElement.style.color = 'red';
-            console.error(`Error: ${error.message}`);
+            console.error('Error: Invalid webhook url');
             return;
         }
 
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             notificationElement.textContent = 'Error';
             notificationElement.style.color = 'red';
-            console.error(`Error: ${error.message}`);
+            console.error('Error: Cannot save settings');
         }
     });
 });
